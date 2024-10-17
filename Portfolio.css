@@ -22,10 +22,14 @@ body{
     z-index: 100;
 }
 .logo{
+    position: relative;
+    left:0;
+    right: 0;
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
+
 }
 .navbar a {
     font-size: 18px;
@@ -37,7 +41,7 @@ body{
 
 }
 .navbar a:hover,
-.navbar a.active{
+.navbar .a {
     color: #00abf0;
 }
 .home{
@@ -54,6 +58,7 @@ body{
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    
 }
 .home-content h3 {
     font-size: 32px;
@@ -138,6 +143,11 @@ body{
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
+    transition: .5s;
+
+}
+.homesci a :hover {
+    color: #081b29;
 
 }
 .homesci a::before{
@@ -147,11 +157,236 @@ body{
     left: 0;
     width: 0;
     height: 100%;
-    background: red;
+    background: #00abf0;
     z-index: -1;
     transition: .5s;
 }
 .homesci a:hover::before{
     width: 100%;
+}
+.About{
+    width: 100%;
+    padding: 30px;
+    background-color: #081b29;
+    
+}
+.about-text{
+    width: 550px;
 
 }
+.main{
+    width: 740px;
+    max-width: 95%;
+    margin-left: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color:#00abf0;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+.about-text h5{
+    color: #ededed;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.resume-main{
+    width: 620px;
+    padding: 30px;
+    background-color: #081b29;
+    max-width: 100%;
+    margin-left: 70px;
+    display: flex;
+    padding: 50px;
+}
+.resume-head{
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #00abf0;
+    font-size: 50px;
+
+}
+.resume-text{
+    align-items: center;
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    width: 1012px;
+    margin-left: 20px;
+    margin-bottom: 45px;
+    background-color: #353b48;
+    width: 900px;
+    margin: 50px auto;
+    color: #fff;
+    padding: 20px;
+}
+
+.resume-header{
+    margin-bottom: 30px;
+    
+    
+}
+.resume-header h1{
+display: inline-block;
+}
+
+.objective{
+    margin-bottom: 30px;
+  
+}
+.education{
+    margin-bottom: 30px;
+}
+.skill-box{
+    margin-bottom: 30px;
+}
+.project{
+    margin-bottom: 30px;
+
+}
+h1{
+    text-align: center;
+}
+
+h3{
+    margin: 5px;
+}
+
+/* Container for skills */
+.skill {
+    background-color: #353b48;
+    width: 500px;
+    margin: 50px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    
+}
+
+.skill li {
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+/* Bar container */
+.bar {
+    justify-content: left;
+    background: #2f3640;
+    display: block;
+    height: 20px;
+    width: 0%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: width 0.3s;
+}
+
+/* Bar animation with colors */
+.bar.c {
+    width: 90%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-c 3s forwards;
+}
+
+.bar.html {
+    width: 90%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-html 3s forwards;
+}
+
+.bar.css {
+    width: 70%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-css 3s forwards;
+}
+
+.bar.php {
+    width: 40%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-php 3s forwards;
+}
+
+.bar.javascript {
+    width: 45%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-js 3s forwards;
+}
+
+.bar.python {
+    width: 30%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+    animation: grow-python 3s forwards;
+}
+
+/* Animations */
+@keyframes grow-c {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes grow-html {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes grow-css {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 86%;
+    }
+}
+
+@keyframes grow-php {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 49%;
+    }
+}
+
+@keyframes grow-js {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+@keyframes grow-python {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}
+
